@@ -1,0 +1,62 @@
+AI Homework Assignment 5
+
+Arpita Sheth : 110422828
+Shreya Bhatia: 110619150
+
+1. Decision Tree Classifier
+DataSet:
+Total Rows = 600
+1. Training = 480 entries
+2. Testing = 120 entries
+
+Code files : main.py, Entropy.py, DecisionTreeClass.py
+Execution: main.py /path/to/crx.data.txt
+
+Note: Kindly use the new txt file provided and not the original txt file since we are renaming the columns from 'A' to 'P'.
+
+Handling Of different type of values:
+1. Missing : Filling the missing values with the most frequent value in case of discrete variable and with the mean value in continuous variable.
+2. Continuous : Deciding threshold and splitting the data on that value.
+
+-> Pruning : Pruning the tree when there is not a significant gain in info after splitting on the attribute. Making it a leaf node with the most frequent label being returned.
+
+Results:
+Accuracy : 80%
+
+
+
+2.Naive Bayes Classifier for Digit Recognition
+
+DataSet: 
+1. Training - 5000 images with labels
+2. Test - 1000 images with labels provided for evaluation
+
+Code: NaiveBayes.py
+
+Execution:
+python NaiveBayes.py /path/to/trainingimages.txt /path/to/traininglabels.txt /path/to/testimages.txt /path/to/testlabels.txt
+
+Results:
+1.Confusion matrix: 
+
+Predicted Labels: 0	1	2	3	4	5	6	7	8	9
+Actual labels:
+	0	  75	0       1	0       1	4	5	0	4	0
+ 	1	  0	106	1	0	0   	0 	1	0	0	0
+	2	  1	5	76	5	2	0	6	2	5	1
+	3   	  0	2 	0	82	0	0	2	7	1	6
+	4	  0	1	0	0	89	0	2	1	1	13
+	5	  3	2	1	26	8	37	2	4	2	7
+	6	  1	7	4	0	7	4	67	0	1	0
+	7   	  0	7	3	0	3	0	0	83	2	8
+	8	  2     7	3	19	4	0	1	2  	54	11
+	9	  1     1	0	4	13	1	0	5	1	74
+
+2.Precision for each digit:
+ 0: 0.90361445783132532, 1: 0.76811594202898548, 2: 0.8539325842696629, 3: 0.6029411764705882, 4: 0.70078740157480313, 5: 0.80434782608695654, 6: 0.77906976744186052, 7: 0.79807692307692313, 8: 0.76056338028169013, 9: 0.6166666666666667
+
+3.Recall for each digit:
+ 0: 0.83333333333333337, 1: 0.98148148148148151, 2: 0.73786407766990292, 3: 0.81999999999999995, 4: 0.83177570093457942, 5: 0.40217391304347827, 6: 0.73626373626373631, 7: 0.78301886792452835, 8: 0.52427184466019416, 9: 0.73999999999999999
+
+4. Accuracy: 74.3%
+
